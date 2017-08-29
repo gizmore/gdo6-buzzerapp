@@ -1,12 +1,12 @@
 <?php
 namespace GDO\Buzzerapp;
 
-use GDO\Core\Module;
+use GDO\Core\GDO_Module;
 use GDO\Date\GDT_Duration;
 use GDO\File\GDT_Filesize;
 use GDO\Template\GDT_Bar;
 
-final class Module_Buzzerapp extends Module
+final class Module_Buzzerapp extends GDO_Module
 {
 	public $module_priority = 99;
 	public function getClasses() { return ['GDO\Buzzerapp\BUZ_Sample', 'GDO\Buzzerapp\BUZ_Button']; }

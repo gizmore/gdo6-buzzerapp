@@ -7,7 +7,7 @@ use GDO\DB\GDT_CreatedBy;
 use GDO\DB\GDT_Object;
 use GDO\Table\GDT_Sort;
 use GDO\UI\GDT_Color;
-use GDO\User\User;
+use GDO\User\GDO_User;
 
 final class BUZ_Button extends GDO
 {
@@ -35,10 +35,10 @@ final class BUZ_Button extends GDO
 	public function getSampleID() { return $this->getVar('button_sample'); }
 	
 	/**
-	 * @param User $user
+	 * @param GDO_User $user
 	 * @return BUZ_Button[]
 	 */
-	public static function forUser(User $user)
+	public static function forUser(GDO_User $user)
 	{
 		return self::table()->select()->where("button_user={$user->getID()}")->exec()->fetchAllObjects();
 	}

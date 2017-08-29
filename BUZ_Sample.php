@@ -8,7 +8,7 @@ use GDO\DB\GDT_CreatedAt;
 use GDO\DB\GDT_CreatedBy;
 use GDO\DB\GDT_DeletedAt;
 use GDO\DB\GDT_DeletedBy;
-use GDO\File\File;
+use GDO\File\GDO_File;
 
 final class BUZ_Sample extends GDO
 {
@@ -26,7 +26,7 @@ final class BUZ_Sample extends GDO
 	}
 	
 	/**
-	 * @return File
+	 * @return GDO_File
 	 */
 	public function getFile() { return $this->getValue('sample_file'); }
 	public function getFileID() { return $this->getVar('sample_file'); }
