@@ -2,11 +2,11 @@
 namespace GDO\Buzzerapp;
 
 use GDO\DB\GDO;
-use GDO\DB\GDO_AutoInc;
-use GDO\DB\GDO_CreatedBy;
-use GDO\DB\GDO_Object;
-use GDO\Table\GDO_Sort;
-use GDO\UI\GDO_Color;
+use GDO\DB\GDT_AutoInc;
+use GDO\DB\GDT_CreatedBy;
+use GDO\DB\GDT_Object;
+use GDO\Table\GDT_Sort;
+use GDO\UI\GDT_Color;
 use GDO\User\User;
 
 final class BUZ_Button extends GDO
@@ -14,11 +14,11 @@ final class BUZ_Button extends GDO
 	public function gdoColumns()
 	{
 		return array(
-			GDO_AutoInc::make('button_id'),
-			GDO_CreatedBy::make('button_user')->notNull(),
-			GDO_Object::make('button_sample')->table(BUZ_Sample::table())->notNull(),
-			GDO_Color::make('button_color'),
-			GDO_Sort::make('button_sort'),
+			GDT_AutoInc::make('button_id'),
+			GDT_CreatedBy::make('button_user')->notNull(),
+			GDT_Object::make('button_sample')->table(BUZ_Sample::table())->notNull(),
+			GDT_Color::make('button_color'),
+			GDT_Sort::make('button_sort'),
 		);
 	}
 	

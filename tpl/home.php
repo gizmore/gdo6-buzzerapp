@@ -7,7 +7,7 @@ $user = User::current();
 $module = Module_Buzzerapp::instance();
 $buttons = BUZ_Button::forUser($user);
 $json = array(
-	'buttons' => GDO_JSON::make()->convertJSON($buttons),
+	'buttons' => GDT_JSON::make()->convertJSON($buttons),
 );
 
 echo $module->onRenderTabs();

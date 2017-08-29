@@ -1,13 +1,13 @@
 <?php
 namespace GDO\Buzzerapp;
 
-use GDO\Audio\GDO_AudioFile;
+use GDO\Audio\GDT_AudioFile;
 use GDO\DB\GDO;
-use GDO\DB\GDO_AutoInc;
-use GDO\DB\GDO_CreatedAt;
-use GDO\DB\GDO_CreatedBy;
-use GDO\DB\GDO_DeletedAt;
-use GDO\DB\GDO_DeletedBy;
+use GDO\DB\GDT_AutoInc;
+use GDO\DB\GDT_CreatedAt;
+use GDO\DB\GDT_CreatedBy;
+use GDO\DB\GDT_DeletedAt;
+use GDO\DB\GDT_DeletedBy;
 use GDO\File\File;
 
 final class BUZ_Sample extends GDO
@@ -16,12 +16,12 @@ final class BUZ_Sample extends GDO
 	{
 		$module = Module_Buzzerapp::instance();
 		return array(
-			GDO_AutoInc::make('sample_id'),
-			GDO_AudioFile::make('sample_file')->notNull()->maxsize($module->cfgMaxSize()),
-			GDO_CreatedAt::make('sample_created'),
-			GDO_CreatedBy::make('sample_creator'),
-			GDO_DeletedAt::make('sample_deleted'),
-			GDO_DeletedBy::make('sample_deletor'),
+			GDT_AutoInc::make('sample_id'),
+			GDT_AudioFile::make('sample_file')->notNull()->maxsize($module->cfgMaxSize()),
+			GDT_CreatedAt::make('sample_created'),
+			GDT_CreatedBy::make('sample_creator'),
+			GDT_DeletedAt::make('sample_deleted'),
+			GDT_DeletedBy::make('sample_deletor'),
 		);
 	}
 	

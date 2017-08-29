@@ -1,3 +1,3 @@
 <?php
-use GDO\Template\GDO_Box;
-echo GDO_Box::make()->html(t('buzz_about'));
+use GDO\Template\GDT_Box;
+echo GDT_Box::make()->html(t('buzz_about'));

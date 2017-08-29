@@ -2,9 +2,9 @@
 namespace GDO\Buzzerapp;
 
 use GDO\Core\Module;
-use GDO\Date\GDO_Duration;
-use GDO\File\GDO_Filesize;
-use GDO\Template\GDO_Bar;
+use GDO\Date\GDT_Duration;
+use GDO\File\GDT_Filesize;
+use GDO\Template\GDT_Bar;
 
 final class Module_Buzzerapp extends Module
 {
@@ -17,8 +17,8 @@ final class Module_Buzzerapp extends Module
 	public function getConfig()
 	{
 		return array(
-			GDO_Filesize::make('buzz_file_size')->initial(1000000)->unsigned()->max(100000000),
-			GDO_Duration::make('buzz_sample_length')->initial('10')->max(600),
+			GDT_Filesize::make('buzz_file_size')->initial(1000000)->unsigned()->max(100000000),
+			GDT_Duration::make('buzz_sample_length')->initial('10')->max(600),
 		);
 	}
 	public function cfgMaxSize() { return $this->getConfigValue('buzz_file_size'); }
@@ -41,7 +41,7 @@ final class Module_Buzzerapp extends Module
 		return $this->templatePHP('tabs.php');
 	}
 	
-	public function onRenderFor(GDO_Bar $navbar)
+	public function onRenderFor(GDT_Bar $navbar)
 	{
 		$this->templatePHP('sidebars.php', ['navbar' => $navbar]);
 	}
