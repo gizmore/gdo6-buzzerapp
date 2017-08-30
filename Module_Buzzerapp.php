@@ -30,7 +30,10 @@ final class Module_Buzzerapp extends GDO_Module
 	public function onIncludeScripts()
 	{
 		$this->addCSS('css/buz.css');
-		$this->addJavascript('js/buz-ctrl.js');
+		if (module_enabled('GWFAngular'))
+		{
+		    $this->addJavascript('js/buz-ctrl.js');
+		}
 	}
 
 	##############
