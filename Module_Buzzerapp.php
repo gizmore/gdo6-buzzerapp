@@ -44,7 +44,7 @@ final class Module_Buzzerapp extends GDO_Module
 		return $this->templatePHP('tabs.php');
 	}
 	
-	public function onRenderFor(GDT_Bar $navbar)
+	public function hookTopBar(GDT_Bar $navbar)
 	{
 		$this->templatePHP('sidebars.php', ['navbar' => $navbar]);
 	}
