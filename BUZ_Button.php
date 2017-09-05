@@ -23,7 +23,7 @@ final class BUZ_Button extends GDO
 	}
 	
 	/**
-	 * @return User
+	 * @return GDO_User
 	 */
 	public function getUser() { return $this->getValue('button_user'); }
 	public function getUserID() { return $this->getVar('button_user'); }
