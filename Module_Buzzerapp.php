@@ -10,6 +10,7 @@ final class Module_Buzzerapp extends GDO_Module
 {
 	public $module_priority = 99;
 	public function getClasses() { return ['GDO\Buzzerapp\BUZ_Sample', 'GDO\Buzzerapp\BUZ_Button']; }
+	public function defaultEnabled() { return false; }
 	
 	##############
 	### Config ###
