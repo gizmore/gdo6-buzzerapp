@@ -2,7 +2,7 @@
 namespace GDO\Buzzerapp\Method;
 
 use GDO\Buzzerapp\BUZ_Button;
-use GDO\DB\GDO;
+use GDO\Core\GDO;
 use GDO\Table\MethodSort;
 use GDO\User\GDO_User;
 
