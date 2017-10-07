@@ -1,13 +1,14 @@
 <?php
 use GDO\Buzzerapp\BUZ_Button;
 use GDO\Buzzerapp\Module_Buzzerapp;
+// use GDO\Core\GDT_JSON;
 use GDO\User\GDO_User;
 
 $user = GDO_User::current();
 $module = Module_Buzzerapp::instance();
 $buttons = BUZ_Button::forUser($user);
 $json = array(
-	'buttons' => GDT_JSON::make()->convertJSON($buttons),
+// 	'buttons' => GDT_JSON::make()->convertJSON($buttons),
 );
 
 echo $module->onRenderTabs();

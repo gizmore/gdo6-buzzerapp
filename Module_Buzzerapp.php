@@ -4,7 +4,7 @@ namespace GDO\Buzzerapp;
 use GDO\Core\GDO_Module;
 use GDO\Date\GDT_Duration;
 use GDO\File\GDT_Filesize;
-use GDO\Template\GDT_Bar;
+use GDO\UI\GDT_Bar;
 
 final class Module_Buzzerapp extends GDO_Module
 {
