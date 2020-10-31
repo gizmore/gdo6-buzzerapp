@@ -19,7 +19,7 @@ final class Module_Buzzerapp extends GDO_Module
 	{
 		return array(
 			GDT_Filesize::make('buzz_file_size')->initial(1000000)->unsigned()->max(100000000),
-			GDT_Duration::make('buzz_sample_length')->initial('10')->max(600),
+			GDT_Duration::make('buzz_sample_length')->initial('10')->max("10m"),
 		);
 	}
 	public function cfgMaxSize() { return $this->getConfigValue('buzz_file_size'); }
