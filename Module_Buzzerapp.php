@@ -4,7 +4,8 @@ namespace GDO\Buzzerapp;
 use GDO\Core\GDO_Module;
 use GDO\Date\GDT_Duration;
 use GDO\File\GDT_Filesize;
-use GDO\UI\GDT_Bar;
+use GDO\UI\GDT_Link;
+use GDO\UI\GDT_Page;
 
 final class Module_Buzzerapp extends GDO_Module
 {
@@ -45,8 +46,10 @@ final class Module_Buzzerapp extends GDO_Module
 		return $this->templatePHP('tabs.php');
 	}
 	
-	public function hookTopBar(GDT_Bar $navbar)
+	public function onInitSidebar()
 	{
-		$this->templatePHP('sidebars.php', ['navbar' => $navbar]);
+	    $nav = GDT_Page::$INSTANCE->topNav;
+	    $nav->addField(GDT_Link::make('link_buzz')->href(href('Buzzerapp', 'Home')));
 	}
+	
 }
