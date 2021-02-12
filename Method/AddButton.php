@@ -14,8 +14,8 @@ final class AddButton extends MethodForm
 		$gdo = BUZ_Button::table();
 		$form->addFields(array(
 			$gdo->gdoColumn('button_sample'),
-			GDT_Submit::make(),
 			GDT_AntiCSRF::make(),
 		));
+		$form->actions()->addField(GDT_Submit::make());
 	}
 }

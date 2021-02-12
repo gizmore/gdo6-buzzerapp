@@ -24,9 +24,9 @@ final class AddSample extends MethodForm
 		$gdo = BUZ_Sample::table();
 		$form->addFields(array(
 			$gdo->gdoColumn('sample_file'),
-			GDT_Submit::make(),
 			GDT_AntiCSRF::make(),
 		));
+		$form->actions()->addField(GDT_Submit::make());
 	}
 	
 	public function formValidated(GDT_Form $form)
