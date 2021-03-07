@@ -6,6 +6,7 @@ use GDO\Date\GDT_Duration;
 use GDO\File\GDT_Filesize;
 use GDO\UI\GDT_Link;
 use GDO\UI\GDT_Page;
+use GDO\Core\Application;
 
 final class Module_Buzzerapp extends GDO_Module
 {
@@ -32,7 +33,7 @@ final class Module_Buzzerapp extends GDO_Module
 	public function onIncludeScripts()
 	{
 		$this->addCSS('css/buz.css');
-		if (module_enabled('Angular'))
+		if (module_enabled('Angular') && Application::instance()->hasTheme('material'))
 		{
 		    $this->addJavascript('js/buz-ctrl.js');
 		}
