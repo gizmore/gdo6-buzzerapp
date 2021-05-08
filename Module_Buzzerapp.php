@@ -44,7 +44,8 @@ final class Module_Buzzerapp extends GDO_Module
 	##############
 	public function onRenderTabs()
 	{
-		return $this->templatePHP('tabs.php');
+	    GDT_Page::$INSTANCE->topTabs->addField(
+	        $this->templatePHP('tabs.php'));
 	}
 	
 	public function onInitSidebar()

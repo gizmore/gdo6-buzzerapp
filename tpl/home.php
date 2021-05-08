@@ -10,8 +10,6 @@ $buttons = BUZ_Button::forUser($user);
 $json = array(
 // 	'buttons' => GDT_JSON::make()->convertJSON($buttons),
 );
-
-echo $module->onRenderTabs();
 ?>
 <div
  ng-controller="BUZCtrl"
@@ -23,7 +21,7 @@ echo $module->onRenderTabs();
  layout-wrap
  layout-fill
   ng-controller="GWFSortCtrl"
-  ng-init='initJSON({url:"<?= jxhref('Buzzerapp', 'SortButton'); ?>", selector:"a.buzz-img-btn"})'>
+  ng-init='initJSON({url:"<?=jxhref('Buzzerapp', 'SortButton')?>", selector:"a.buzz-img-btn"})'>
    <a
  flex="45"
     gdo-id="{{button.button_id}}"
