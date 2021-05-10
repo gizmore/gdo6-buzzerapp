@@ -16,7 +16,7 @@ final class AddSample extends MethodForm
 	{
 		$response = parent::execute();
 		$tabs = Module_Buzzerapp::instance()->onRenderTabs();
-		return $tabs->add($response);
+		return $tabs->addField($response);
 	}
 	
 	public function createForm(GDT_Form $form)
