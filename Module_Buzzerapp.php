@@ -35,7 +35,7 @@ final class Module_Buzzerapp extends GDO_Module
 		$this->addCSS('css/buz.css');
 		if (module_enabled('Angular') && Application::instance()->hasTheme('material'))
 		{
-		    $this->addJavascript('js/buz-ctrl.js');
+		    $this->addJS('js/buz-ctrl.js');
 		}
 	}
 
